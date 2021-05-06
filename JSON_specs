@@ -1,0 +1,85 @@
+product
+    {
+        "id": ..., 
+        "name": ...,
+        "price": {
+            "$numberDouble": number
+        },
+        "image_list": List<ImageURL>,
+        "subcategory": List<category>,
+        "description": a paragraph,
+
+        //! backend side edit required here
+        // rest of properties should be inside the following object
+        // to put them all in a table
+        others: {
+            "unit": ...,
+            "..." : ...
+        }
+        "stock": {
+             "$numberDouble": "0.0"
+        },
+        "discount": {
+             "$numberDouble": "0.0"
+         }
+    },
+
+category
+    {
+        "category": ...,
+        "subcategory": [
+            "subcat1",
+            "subcat2",
+            "subcat3",
+        ]
+    }
+    
+    user
+    {
+    "username": "",
+	"password": "$2b$12$cYZ6u.5bbTf9Ik/L8EgE2ul5v0Eoq16Zhkb5Ik06pjdHJqxSibyrO" (hashed password),
+	"email": "",
+	"privilege": false|true,
+	"address": [
+		"address_1",
+		"address_2",
+    ....
+	],
+	"orders": [
+		{
+			"order_id": "",
+			"status": "delivered|on-road|pending",
+			"order_time": UNIX Time,
+			"delivery_time": Unix Time,
+			"address": "",
+			"cart": [
+				{
+					"product_id": "",
+					"quantity": 0
+				},
+        {
+        ...
+        }
+			],
+			"payment_method": ""
+		},
+		
+	  ],
+	"recently_viewed": [
+		"product_id_1",
+    "product_id_2",
+    ...
+	],
+	"is_subscribed": false,
+	"cart": [
+		{
+			"product_id": "",
+			"quantity": 0
+		},
+    {
+    ...
+    }
+	]
+}
+    
+    }
