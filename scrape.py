@@ -104,7 +104,7 @@ print("\nNumber of urls:"+str(len(url_list)))
 
 #scraping every product's information
 print ("Scraping Products")
-for i, url in enumerate(url_list[:40]):
+for i, url in enumerate(url_list):
 	
 	progressBar(i,len(url_list))
 	# Extract first <h1>(...)</h1> text
